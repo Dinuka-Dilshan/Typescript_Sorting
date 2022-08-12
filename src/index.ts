@@ -4,17 +4,14 @@ import { Sorter } from './Sorter.js';
 
 import { LinkedList } from './LinkedList.js';
 
+const stringCollection = new CharactorsCollection('dasec');
+stringCollection.sort();
 
-const string = new CharactorsCollection('dasec')
-const stringSorter = new Sorter(string);
-stringSorter.sort();
-console.log(string.values);
+console.log(stringCollection.values);
 
-const numbers = new NumbersCollection([8, 6, 4, 7, 5])
-const numberSorter = new Sorter(numbers);
-numberSorter.sort();
-console.log(numbers.values);
-
+const numbersCollection = new NumbersCollection([8, 6, 4, 7, 5]);
+numbersCollection.sort();
+console.log(numbersCollection.values);
 
 const list = new LinkedList();
 list.add(20);
@@ -23,6 +20,6 @@ list.add(5);
 list.add(4);
 list.add(85);
 list.add(12);
-const listSorter = new Sorter(list);
-listSorter.sort();
+
+list.sort();
 console.log(list.print());
